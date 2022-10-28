@@ -23,6 +23,4 @@ func main() {
 	fmt.Printf("Name: %s", name)
 	fmt.Println("")
 
-	//4
-
 }
