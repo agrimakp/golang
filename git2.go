@@ -8,8 +8,7 @@ import (
 
 func main() {
 	var name string
-	fmt.Println("Input username")
-	fmt.Scan(&name)
+	name = "shidil"
 
 	resp, err := http.Get("https://api.github.com/users/" + name)
 	if err != nil {
