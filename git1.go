@@ -6,11 +6,10 @@ import (
 	"net/http"
 )
 
-// create struct
-// json unmartial into struct
 func main() {
 	var name string
-	name = "shidil"
+	fmt.Println("Input username")
+	fmt.Scan(&name)
 
 	resp, err := http.Get("https://api.github.com/users/" + name)
 	if err != nil {
@@ -27,4 +26,9 @@ func main() {
 	if err := scanner.Err(); err != nil {
 		panic(err)
 	}
+
+	fmt.Println()
+
+	fmt.Println("Name:")
+
 }
