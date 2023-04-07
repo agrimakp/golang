@@ -45,39 +45,20 @@ function App() {
 
   return (
     <div className="App">
-      <div className='chat-left'>
-        <div className='chat-header'>
-          <div className='Avatar'>pic</div>
-          <div className='profile'>
-            <h3>John</h3>
-            <span>developer</span>
-          </div>
-          <div className='edit'>icon</div>
-        </div>
+      
+    </div>
+  )
+}
 
-        <input className='chat-search' type="text" name='search' />
+export default App
 
-        <div className='chat-list'>
-          <ChatList name="Kunjupuppy" message="Type a message" />
-          <ChatList name="Shidipuppy" message="Type a message" />
-        </div>
-        {/* <ul>
+
+   {/* <ul>
         {
           messages.map((m, i) => (
             <li key={i}>{m}</li>
           ))
         }
       </ul> */}
-      </div>
-      <div className='chat-center'>
-        <input type="text" name="message" onChange={typeMessage} />
-        <input type="submit" value="Send" onClick={sendMessage}></input>
-      </div>
-      <div className='chat-right'>
-dsfsdfdsf
-      </div>
-    </div>
-  )
-}
-
-export default App
+ {/* <input type="text" name="message" onChange={typeMessage} />
+        <input type="submit" value="Send" onClick={sendMessage}></input> */}
