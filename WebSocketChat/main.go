@@ -21,7 +21,7 @@ func NewServer() *Server {
 func (s *Server) handleWS(ws *websocket.Conn) {
 	fmt.Println("new incoming connection from client:", ws.RemoteAddr())
 	s.conns[ws] = true
-
+	ws.Write([]byte("Joined"))
 	s.readloop(ws)
 
 }
@@ -39,8 +39,8 @@ func (s *Server) readloop(ws *websocket.Conn) {
 			continue
 		}
 		msg := buf[:n]
-		// fmt.Println(string(msg))
-		// ws.Write([]byte("thank you for the msg"))
+		fmt.Println(string(msg))
+		ws.Write([]byte("thank you for the msg"))
 
 		s.broadcast(msg)
 	}
@@ -59,5 +59,5 @@ func (s *Server) broadcast(b []byte) {
 func main() {
 	server := NewServer()
 	http.Handle("/ws", websocket.Handler(server.handleWS))
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":4000", nil)
 }
