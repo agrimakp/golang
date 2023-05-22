@@ -37,8 +37,8 @@ function App() {
   }
 
   const sendMessage = () => {
-
     socket.send(draft)
+    setDraft("")
   }
 
   return (
@@ -72,9 +72,18 @@ function App() {
 
         </div>
 
-
         {/* chat */}
-        <div className='chat'>ddfsdfds</div>
+        <div className='chat'>
+
+          {
+            messages.map((m, i) => (
+              <p key={i}>{m}</p>
+            ))
+          }
+
+          <input type="text" name="message" value={draft} onChange={typeMessage} />
+          <input type="submit" value="Send" onClick={sendMessage}></input>
+        </div>
 
 
 
@@ -92,14 +101,3 @@ function App() {
 }
 
 export default App
-
-
-{/* <ul>
-        {
-          messages.map((m, i) => (
-            <li key={i}>{m}</li>
-          ))
-        }
-      </ul> */}
-{/* <input type="text" name="message" onChange={typeMessage} />
-        <input type="submit" value="Send" onClick={sendMessage}></input> */}
