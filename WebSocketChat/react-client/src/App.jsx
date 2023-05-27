@@ -18,7 +18,7 @@ const ChatItem = (props) => {
 }
 
 function App() {
-  const [messages, setMessages] = useState(["Kunja", "Chippy"])
+  const [messages, setMessages] = useState(["aaaa", "ssss"])
   const [draft, setDraft] = useState("")
 
   useEffect(() => {
@@ -54,23 +54,23 @@ function App() {
           <img src='./icon.png' className='icon' />
           <img src='./icon.png' className='icon' />
           <img src='./icon.png' className='icon' />
-
         </div>
 
         {/* // messages list */}
-        <div className='chatList'>
+        {/* <div className='chatList'>
           <div className='header'>
             <h3>Messages</h3>
             <span className='count'>12</span>
             <div className='newChat'>+</div>
           </div>
+
           <input type='search' name='search' className='search' placeholder='Search messages' />
 
 
-          <ChatItem isActive name='chinchu' message='1Lorem ipsum dolor sit amet' time='10.00' />
-          <ChatItem name='manchu' message='2Lorem ipsum dolor sit amet' time='10.00' />
+          <ChatItem isActive name='aaaa' message='1Lorem ipsum dolor sit amet' time='10.00' />
+          <ChatItem name='ssss' message='2Lorem ipsum dolor sit amet' time='10.00' />
 
-        </div>
+        </div> */}
 
         {/* chat */}
         <div className='chat'>

@@ -12,3 +12,10 @@ socket.addEventListener("message", (event) => {
 
 
 socket.send("aaaa")
+
+
+
+<!-- Run server
+ -->
+
+ go run main.go
